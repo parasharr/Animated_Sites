@@ -1,0 +1,111 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+                
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy-bold', sans-serif;
+    color: #fff;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+
+}
+.nav-links{
+    display: flex;
+    gap: 2vw;
+}
+.nav-links h4{
+    font-size: 0.75vw;
+    
+    font-weight: 600;
+    
+}
+nav:hover #nav-bottom{
+    /* background-color: red; */
+    background-color: #111;
+    height: 100%;
+    bottom: -145%;
+    z-index: 99;
+}
+#nav-bottom{
+    /* background-color: red; */
+    height: 0%;
+    width: 80%;
+    position: absolute;
+    bottom: -0%;
+    border-bottom: 1px solid #dadada;
+    transition: all ease 0.65s;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   padding: 2vw 15vw;
+   padding-left: 18vw;
+}
+
+
+.bottm-div h5{
+    font-size: 0.7vw;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page1 h1{
+    font-size: 8.5vw;
+    text-transform: uppercase;
+   line-height: 8.5vw;
+}
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    border-radius: 50%;
+    background-color: #0BA34E;
+}
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vw;
+    /* font-size: 1.5vw; */
+    width: 50%;
+}
+#page1-under{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page1-under h4{
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 5px 10px;
+    border: 1px solid #fff9f97d;
+    border-radius: 50px;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+#page1-under .and{
+    border: none;
+}
+#page
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+}
