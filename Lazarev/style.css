@@ -12,50 +12,79 @@ body{
     height: 100%;
     width: 100%;
 }
-nav{
+nav {
     position: fixed;
+    /* background-color: rgb(0, 255, 68); */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    height: 12vh;
     width: 100%;
     padding: 2vw 10.4vw;
     justify-content: space-between;
-
+    background-color: #111;
+    z-index: 10;
 }
-.nav-links{
+
+nav h1 {
+    font-size: 1.6vw;
+}
+
+.nav-part2 {
     display: flex;
     gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
 }
-.nav-links h4{
-    font-size: 0.75vw;
-    
+
+.nav-part2 h4 {
+    font-size: 0.73vw;
+    text-transform: uppercase;
     font-weight: 600;
-    
+    margin-bottom: 2.6vw;
 }
-nav:hover #nav-bottom{
+
+.nav-part2 h5 {
+    margin-bottom: 1vw;
     /* background-color: red; */
-    background-color: #111;
-    height: 100%;
-    bottom: -145%;
-    z-index: 99;
+    display: none;
+    overflow: hidden;
 }
-#nav-bottom{
-    /* background-color: red; */
-    height: 0%;
-    width: 80%;
+
+.nav-part2 h5 span {
+    font-size: 0.77vw;
+    font-weight: 400;
+    transform: translateY(25px);
+    display: inline-block;
+}
+
+nav button {
+    background-color: #0BA34E;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+}
+
+nav button svg {
+    height: 0.8vw;
+    margin-left: 1.6vw;
+}
+
+#nav-bottom {
+    width: 79%;
+    height: 0vh;
     position: absolute;
-    bottom: -0%;
-    border-bottom: 1px solid #dadada;
-    transition: all ease 0.65s;
-   display: flex;
-   align-items: flex-start;
-   justify-content: space-between;
-   padding: 2vw 15vw;
-   padding-left: 18vw;
-}
-
-
-.bottm-div h5{
-    font-size: 0.7vw;
+    /* background-color: red; */
+    top: 100%;
+    background-color: #111;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
 }
 
 #page1{
