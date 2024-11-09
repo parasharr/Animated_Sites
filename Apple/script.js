@@ -1,3 +1,6 @@
+let header = document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY > 100);
+//================================ locomotive and scroll trigger dont work together so this part ===========================
 function loco(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -28,86 +31,90 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
 }
-loco();
+loco() //function call 
+//======================================== locomotive scroll trigger part ends here =================================
 
+// for video to play on stroll trigger
 gsap.to("#page>video",{
-  scrollTrigger:{
-      trigger:`#page>video`,
-      start:`2% top`,
-      end:`bottom top`,
-      scroller:`#main`
-  },
-  onStart:()=>{
-      document.querySelector("#page>video").play()
-  }
-})
+scrollTrigger:{
+  trigger:`#page>video`,
+  start:`3% top`,
+  end:`bottom top`,
+  scroller:`#main`,
+  // markers: true
+},
+onStart:()=>{
+  document.querySelector("#page>video").play();
+}})
 
+//for page to not move 
 gsap.to("#page",{
   scrollTrigger:{
     trigger:`#page`,
-    strat:`top top`,
+    start:`top top`,
     end:`bottom top`,
     scroller:`#main`,
     pin:true
   }
 })
 
+// for page-bottom to disappear on scroll
 gsap.to("#page-bottom",{
   scrollTrigger:{
-      trigger:`#page-bottom`,
-      start:`5% top`,
-      end:`bottom top`,
-      scroller:`#main`,
-      scrub:.5,
+    trigger:`#page-bottom`,
+    start:`10% top`,
+    end:`bottom top`,
+    scroller:`#main`,
   },
   opacity:0
 })
 
-var tl = gsap.timeline({
+//for scroll text
+//pg1
+var tl=gsap.timeline({
   scrollTrigger:{
-      trigger:`#page1`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
+    trigger:`#page1`,
+    start:`top top`,
+    scrub:1,
+    scroller:`#main`,
+    pin:true
   }
 })
-
 
 tl.to("#page1>h1",{
   top:`-50%`
 })
 
-var tl1 = gsap.timeline({
+//pg2
+var tl1=gsap.timeline({
   scrollTrigger:{
-      trigger:`#page2`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
+    trigger:`#page2`,
+    start:`top top`,
+    scrub:1,
+    scroller:`#main`,
+    pin:true
   }
 })
-
 
 tl1.to("#page2>h1",{
   top:`-50%`
 })
 
-
-var tl2 = gsap.timeline({
+//pg4
+var tl2=gsap.timeline({
   scrollTrigger:{
-      trigger:`#page4`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
+    trigger:`#page4`,
+    start:`top top`,
+    scrub:1,
+    scroller:`#main`,
+    pin:true
   }
 })
 
-
-tl2.to("#page4>#center-page4",{
+tl2.to("#page4>.p4centre",{
   top:`-50%`
 })
+
 
 function canvas(){
   const canvas = document.querySelector("#page7>canvas");
@@ -347,7 +354,7 @@ snap: "frame",
 ease: `none`,
 scrollTrigger: {
   scrub: 0.15,
-  trigger: `#page7>canvas`,
+  trigger: `canvas`,
   //   set start end according to preference
   start: `top top`,
   end: `600% top`,
@@ -384,7 +391,7 @@ ctx.drawImage(
 }
 ScrollTrigger.create({
 
-trigger: "#page7>canvas",
+trigger: "canvas",
 pin: true,
 // markers:true,
 scroller: `#main`,
@@ -515,7 +522,7 @@ var tl3 = gsap.timeline({
       start:`top top`,
       scrub:1,
       scroller:`#main`,
-      // pin: true
+      pin:true
   }
 })
 
@@ -524,13 +531,15 @@ tl3.to("#page21>#troff",{
   opacity:0
 })
 
+
+// page 22 opacity 0 making 
 var tl4 = gsap.timeline({
   scrollTrigger:{
       trigger:`#page22`,
       start:`top top`,
       scrub:1,
       scroller:`#main`,
-      // pin: true
+      pin:true
   }
 })
 
@@ -539,7 +548,7 @@ tl4.to("#page22>#snroff",{
   opacity:0
 })
 
-
+// page
 
 gsap.to("#page23>img",{
   scrollTrigger:{
