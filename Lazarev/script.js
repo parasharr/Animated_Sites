@@ -1,3 +1,4 @@
+
 function navAnimation(){
     var nav = document.querySelector("nav")
 
