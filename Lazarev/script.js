@@ -50,7 +50,8 @@ function loadingAnimation(){
         ease:"expo.out"
     })
     tl.from("nav",{
-        opacity:0
+        opacity:0,
+        delay:-0.2
     })
     tl.from("#page1 h1, #page1 p, #page1 div",{
         opacity:0,
